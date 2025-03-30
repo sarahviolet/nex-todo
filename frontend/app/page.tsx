@@ -177,62 +177,62 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gray-100 p-6 flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-purple-600 mb-6">NexToDo</h1>
+      <h1 className="text-4xl font-bold text-purple-500 mb-6">NexToDo</h1>
 
-      {/* Todo input form */}
-      <div className="bg-white p-4 rounded shadow w-80 mb-6">
-        <input
-          type="text"
-          name="title"
-          placeholder="Title"
-          value={formData.title}
-          onChange={handleInputChange}
-          className="w-full mb-2 px-3 py-2 border rounded"
-        />
-        <input
-          type="date"
-          name="date"
-          value={formData.date}
-          onChange={handleInputChange}
-          className="w-full mb-2 px-3 py-2 border rounded"
-        />
-        <select
-          name="period"
-          value={formData.period}
-          onChange={handleInputChange}
-          className="w-full mb-2 px-3 py-2 border rounded"
-        >
-          <option value="morning">Morning</option>
-          <option value="afternoon">Afternoon</option>
-          <option value="evening">Evening</option>
-        </select>
-        <select
-          name="priority"
-          value={formData.priority}
-          onChange={handleInputChange}
-          className="w-full mb-2 px-3 py-2 border rounded"
-        >
-          <option value="high">High</option>
-          <option value="medium">Medium</option>
-          <option value="low">Low</option>
-        </select>
-        <select
-          name="type"
-          value={formData.type}
-          onChange={handleInputChange}
-          className="w-full mb-2 px-3 py-2 border rounded"
-        >
-          <option value="task">Task</option>
-          <option value="routine">Routine</option>
-          <option value="event">Event</option>
-        </select>
-        <button
-          onClick={handleSubmit}
-          className="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-500 transition"
-        >
-          Add Todo
-        </button>
-      </div>
+        {/* input form */}
+        <div className="bg-white p-4 rounded shadow w-80 mb-6">
+          <input
+            type="text"
+            name="title"
+            placeholder="Title"
+            value={formData.title}
+            onChange={handleInputChange}
+            className="w-full mb-2 px-3 py-2 border rounded"
+          />
+          <input
+            type="date"
+            name="date"
+            value={formData.date}
+            onChange={handleInputChange}
+            className="w-full mb-2 px-3 py-2 border rounded"
+          />
+          <select
+            name="period"
+            value={formData.period}
+            onChange={handleInputChange}
+            className="w-full mb-2 px-3 py-2 border rounded"
+          >
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+          </select>
+          <select
+            name="priority"
+            value={formData.priority}
+            onChange={handleInputChange}
+            className="w-full mb-2 px-3 py-2 border rounded"
+          >
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+          <select
+            name="type"
+            value={formData.type}
+            onChange={handleInputChange}
+            className="w-full mb-2 px-3 py-2 border rounded"
+          >
+            <option value="task">Task</option>
+            <option value="routine">Routine</option>
+            <option value="event">Event</option>
+          </select>
+          <button
+            onClick={handleSubmit}
+            className="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-500 transition"
+          >
+            Add Todo
+          </button>
+        </div>
 
       {/* Todo list */}
       <ul className="w-80 bg-white rounded shadow p-4">
