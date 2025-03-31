@@ -1,10 +1,11 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/api/todos";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/todos";
 
 // Fetch all todos
 export const getTodos = async () => {
   const response = await axios.get(API_BASE_URL);
+  console.log("✅ GET /todos response:", response.data);
   return response.data;
 };
 

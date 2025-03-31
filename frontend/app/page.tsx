@@ -5,9 +5,12 @@ import { getTodos, createTodo, updateTodo, deleteTodo } from "@/lib/api";
 
 // Toggle completion API
 async function toggleTodoComplete(id: string) {
-  const res = await fetch(`http://localhost:5000/api/todos/${id}/complete`, {
-    method: "PATCH",
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/${id}/complete`,
+    {
+      method: "PATCH",
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed to toggle todo completion");
